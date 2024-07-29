@@ -37,7 +37,7 @@ public class MyPdaScannerPlugin implements FlutterPlugin, MethodCallHandler {
   private static final String DATA = "data";
   private static final String SOURCE = "source_byte";
 
-  private static final String CHARGING_CHANNEL = "pda_scanner";
+  private static final String CHARGING_CHANNEL = "pda_scanner_channel";
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {

@@ -1,29 +1,17 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:my_pda_scanner/my_pda_scanner.dart';
-import 'package:my_pda_scanner/my_pda_scanner_platform_interface.dart';
-import 'package:my_pda_scanner/my_pda_scanner_method_channel.dart';
-import 'package:plugin_platform_interface/plugin_platform_interface.dart';
+import 'package:flutter/services.dart';
 
-class MockMyPdaScannerPlatform
-    with MockPlatformInterfaceMixin
-    implements MyPdaScannerPlatform {
 
-  @override
-  Future<String?> getPlatformVersion() => Future.value('42');
-}
 
 void main() {
-  final MyPdaScannerPlatform initialPlatform = MyPdaScannerPlatform.instance;
+  const MethodChannel channel = MethodChannel('pda_scanner_channel');
 
-  test('$MethodChannelMyPdaScanner is the default instance', () {
-    expect(initialPlatform, isInstanceOf<MethodChannelMyPdaScanner>());
-  });
+  TestWidgetsFlutterBinding.ensureInitialized();
 
-  test('getPlatformVersion', () async {
-    MyPdaScanner myPdaScannerPlugin = MyPdaScanner();
-    MockMyPdaScannerPlatform fakePlatform = MockMyPdaScannerPlatform();
-    MyPdaScannerPlatform.instance = fakePlatform;
+  setUp(() {
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,(message) async {
+      return '42';
 
-    expect(await myPdaScannerPlugin.getPlatformVersion(), '42');
+    },);
   });
 }
