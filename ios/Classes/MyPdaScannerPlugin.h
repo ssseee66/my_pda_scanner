@@ -1,4 +1,4 @@
 #import <Flutter/Flutter.h>
 
-@interface MyPdaScannerPlugin : NSObject<FlutterPlugin>
+@interface SmScanPlugin : NSObject<FlutterPlugin>
 @end

@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('my_pda_scanner');
+  const MethodChannel channel = MethodChannel('sm_scan');
 
   TestWidgetsFlutterBinding.ensureInitialized();
 

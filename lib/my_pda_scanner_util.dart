@@ -3,18 +3,18 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class MyPdaScannerUtil {
-  MyPdaScannerUtil._();
+class ShangMiScanUtil {
+  ShangMiScanUtil._();
 
-  factory MyPdaScannerUtil() => _instance;
-  static final MyPdaScannerUtil _instance = MyPdaScannerUtil._();
+  factory ShangMiScanUtil() => _instance;
+  static final ShangMiScanUtil _instance = ShangMiScanUtil._();
   bool showLog = true;
 
-  EventChannel eventChannel = EventChannel('my_pda_channel');
+  EventChannel eventChannel = EventChannel('shangmi_flutter');
 
   void printLog(dynamic log) {
     if (showLog) {
-      debugPrint('PDA_LOG: $log');
+      debugPrint('商米: $log');
     }
   }
 

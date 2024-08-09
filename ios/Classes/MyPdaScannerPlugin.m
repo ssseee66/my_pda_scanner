@@ -1,11 +1,11 @@
-#import "MyPdaScannerPlugin.h"
+#import "SmScanPlugin.h"
 
-@implementation MyPdaScannerPlugin
+@implementation SmScanPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
-      methodChannelWithName:@"my_pda_scanner"
+      methodChannelWithName:@"sm_scan"
             binaryMessenger:[registrar messenger]];
-  MyPdaScannerPlugin* instance = [[MyPdaScannerPlugin alloc] init];
+  SmScanPlugin* instance = [[SmScanPlugin alloc] init];
   [registrar addMethodCallDelegate:instance channel:channel];
 }
 

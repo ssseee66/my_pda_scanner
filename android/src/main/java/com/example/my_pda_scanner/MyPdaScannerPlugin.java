@@ -1,4 +1,4 @@
-package com.example.my_pda_scanner;
+package com.example.sm_scan;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -11,18 +11,18 @@ import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.EventChannel;
 
 /**
- * MyPdaScannerPlugin
+ * SmScanPlugin
  */
-public class MyPdaScannerPlugin implements FlutterPlugin {
+public class SmScanPlugin implements FlutterPlugin {
 
     private EventChannel eventChannel;
     private Context applicationContext;
 
     private static final String ACTION_DATA_CODE_RECEIVED =
-            "com.service.scanner.data";
+            "com.sunmi.scanner.ACTION_DATA_CODE_RECEIVED";
     private static final String DATA = "data";
 
-    private static final String CHARGING_CHANNEL = "my_pda_channel";
+    private static final String CHARGING_CHANNEL = "shangmi_flutter";
 
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
@@ -64,7 +64,7 @@ public class MyPdaScannerPlugin implements FlutterPlugin {
         return new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                String code = intent.getStringExtra("ScanCode");
+                String code = intent.getStringExtra(DATA);
                 if (code != null) {
                     events.success(code);
                 }

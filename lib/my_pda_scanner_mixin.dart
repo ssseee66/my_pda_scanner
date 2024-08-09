@@ -1,12 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:my_pda_scanner/my_pda_scanner_util.dart';
+import 'package:sm_scan/shangmi_util.dart';
 
 /// 商米扫描设备混入
-mixin MyPdaScannerMixin<T extends StatefulWidget> on State<T> {
+mixin ShangmiScanMixin<T extends StatefulWidget> on State<T> {
   late StreamSubscription streamSubscription;
-  final MyPdaScannerUtil util = MyPdaScannerUtil();
+  final ShangMiScanUtil util = ShangMiScanUtil();
 
   @override
   void initState() {
@@ -16,7 +16,7 @@ mixin MyPdaScannerMixin<T extends StatefulWidget> on State<T> {
       streamSubscription = util.start().listen((event) {
         util.printLog("接收扫描数据:$event");
         if (event != null) {
-          myPdaScannerCodeHandle(event.toString());
+          shangmiCodeHandle(event.toString());
         }
       });
     });
@@ -27,7 +27,7 @@ mixin MyPdaScannerMixin<T extends StatefulWidget> on State<T> {
   ///
   /// 可以在这里处理相关逻辑
   ///
-  Future<void> myPdaScannerCodeHandle(String code);
+  Future<void> shangmiCodeHandle(String code);
 
   @override
   void dispose() {
