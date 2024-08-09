@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 
-class SmScan {
+class MyPdaScanner {
   static const MethodChannel _channel =
-      const MethodChannel('sm_scan');
+  const MethodChannel('my_pda_scanner');
 
-  static Future<String?> smScanInit() async {
+  static Future<String?> myPdaScannerInit() async {
     final String? code = await _channel.invokeMethod('init');
     return code;
   }
