@@ -1,5 +1,5 @@
-group = "com.example.my_pda_scanner"
-version = "1.0"
+group 'com.example.my_pda_scanner'
+version '1.0'
 
 buildscript {
     repositories {
@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:7.3.0")
+        classpath 'com.android.tools.build:gradle:7.2.2'
     }
 }
 
@@ -19,36 +19,18 @@ rootProject.allprojects {
     }
 }
 
-apply plugin: "com.android.library"
+apply plugin: 'com.android.library'
 
 android {
-    if (project.android.hasProperty("namespace")) {
-        namespace = "com.example.my_pda_scanner"
-    }
+    compileSdk 34
 
-    compileSdk = 34
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
 
     defaultConfig {
-        minSdk = 21
+        minSdkVersion 16
+        buildToolsVersion = "30.0.3"
     }
-
-    dependencies {
-        testImplementation("junit:junit:4.13.2")
-        testImplementation("org.mockito:mockito-core:5.0.0")
-    }
-
-    testOptions {
-        unitTests.all {
-            testLogging {
-               events "passed", "skipped", "failed", "standardOut", "standardError"
-               outputs.upToDateWhen {false}
-               showStandardStreams = true
-            }
-        }
+    lintOptions {
+        disable 'InvalidPackage'
     }
 }
