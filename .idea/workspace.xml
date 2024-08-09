@@ -1,296 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="367b36b7-5849-4b83-9269-340946e8ce62" name="Default Changelist" comment="bug fix" />
+    <list default="true" id="a509a65e-ad45-40db-b4d8-7ae282339f30" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
-    <execution />
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="5" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="1e7niibjyifbU80tWQGwRTkYWXT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectReloadState">
-    <option name="STATE" value="1" />
-  </component>
+  <component name="ProjectId" id="2kPSKjjP6AomNwZuLiQoYAvokGi" />
   <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/hlx/github/shangmi_scan_data_flutter",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+    "last_opened_file_path": "G:/flutter_project/shangmi_scan_data_flutter",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\flutterplugin\sm_scan\android\src\main\aidl" />
-      <recent name="D:\flutterplugin\sm_scan\android\src\main\java\com\example\sm_scan\aidl" />
-      <recent name="D:\flutterplugin\sm_scan\android\src\main\java\com\example\sm_scan" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\flutterplugin\sm_scan\android\src\main\res" />
-    </key>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\eee\AppData\Roaming\Subversion</configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="367b36b7-5849-4b83-9269-340946e8ce62" name="Default Changelist" comment="" />
-      <created>1593681627197</created>
+      <changelist id="a509a65e-ad45-40db-b4d8-7ae282339f30" name="Changes" comment="" />
+      <created>1723183657002</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1593681627197</updated>
-      <workItem from="1597369309737" duration="2847000" />
-      <workItem from="1597372265475" duration="930000" />
-      <workItem from="1645851675459" duration="223000" />
-      <workItem from="1655276050341" duration="1134000" />
-      <workItem from="1655365294698" duration="1181000" />
-      <workItem from="1655366512399" duration="169000" />
-      <workItem from="1672816052874" duration="484000" />
-      <workItem from="1692082399598" duration="343000" />
-      <workItem from="1692082764946" duration="75000" />
-      <workItem from="1703744285305" duration="2437000" />
+      <updated>1723183657002</updated>
     </task>
-    <task id="LOCAL-00001" summary="更新文档">
-      <created>1597372860900</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1597372860901</updated>
-    </task>
-    <task id="LOCAL-00002" summary="更新文档">
-      <created>1597372907053</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1597372907053</updated>
-    </task>
-    <task id="LOCAL-00003" summary="更新文档">
-      <created>1597373571923</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1597373571924</updated>
-    </task>
-    <task id="LOCAL-00004" summary="更换监听广播名">
-      <created>1597374802253</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1597374802253</updated>
-    </task>
-    <task id="LOCAL-00005" summary="更换通道方法名称">
-      <created>1597375721765</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1597375721765</updated>
-    </task>
-    <task id="LOCAL-00006" summary="删除了一些注释">
-      <created>1597387249534</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1597387249534</updated>
-    </task>
-    <task id="LOCAL-00007" summary="删除了一些注释">
-      <created>1597389629833</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1597389629833</updated>
-    </task>
-    <task id="LOCAL-00008" summary="删除了一些注释">
-      <created>1597390996229</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1597390996229</updated>
-    </task>
-    <task id="LOCAL-00009" summary="删除了一些注释">
-      <created>1597391447286</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1597391447286</updated>
-    </task>
-    <task id="LOCAL-00010" summary="删除了一些注释">
-      <created>1597391485821</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1597391485821</updated>
-    </task>
-    <task id="LOCAL-00011" summary="文档更新">
-      <created>1597393124971</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1597393124971</updated>
-    </task>
-    <task id="LOCAL-00012" summary="文档更新">
-      <created>1597393168649</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1597393168649</updated>
-    </task>
-    <task id="LOCAL-00013" summary="文档更新">
-      <created>1597393265725</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1597393265725</updated>
-    </task>
-    <task id="LOCAL-00014" summary="upgrade flutter version to 2.10.1">
-      <created>1645851881396</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1645851881397</updated>
-    </task>
-    <task id="LOCAL-00015" summary="适配flutter3.0">
-      <created>1655276317368</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1655276317368</updated>
-    </task>
-    <task id="LOCAL-00016" summary="适配flutter3.0">
-      <created>1655276578528</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1655276578528</updated>
-    </task>
-    <task id="LOCAL-00017" summary="更新文档">
-      <created>1655366389548</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1655366389548</updated>
-    </task>
-    <task id="LOCAL-00018" summary="update to `3.0.1`">
-      <created>1655366578451</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1655366578451</updated>
-    </task>
-    <task id="LOCAL-00019" summary="update to `3.0.1`">
-      <created>1655366652255</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1655366652255</updated>
-    </task>
-    <task id="LOCAL-00020" summary=":bug: update to 4.0.0">
-      <created>1672816501632</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1672816501632</updated>
-    </task>
-    <task id="LOCAL-00021" summary=":bug: update to 5.0.0">
-      <option name="closed" value="true" />
-      <created>1692082715606</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1692082715606</updated>
-    </task>
-    <task id="LOCAL-00022" summary="bug fix">
-      <option name="closed" value="true" />
-      <created>1711782938271</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1711782938271</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="更换监听广播名" />
-    <MESSAGE value="更换通道方法名称" />
-    <MESSAGE value="删除了一些注释" />
-    <MESSAGE value="文档更新" />
-    <MESSAGE value="upgrade flutter version to 2.10.1" />
-    <MESSAGE value="适配flutter3.0" />
-    <MESSAGE value="更新文档" />
-    <MESSAGE value="update to `3.0.1`" />
-    <MESSAGE value=":bug: update to 4.0.0" />
-    <MESSAGE value=":bug: update to 5.0.0" />
-    <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
 </project>
