@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodChannel;
+import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 
 /**
  * MyPdaScannerPlugin
@@ -28,10 +29,9 @@ public class MyPdaScannerPlugin implements FlutterPlugin {
 
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
-
         flutterChannel = new MethodChannel(
                 flutterPluginBinding.getBinaryMessenger(), FLUTTER_TO_ANDROID_CHANNEL);
-        flutterChannel.setMethodCallHandler(new MethodCallHandler() {
+        flutterChannel.setMethodCallHandler(new MethodChannel.MethodCallHandler() {
             @Override
             public void onMethodCall(MethodCall call, Result result) {
                 if (call.method.equals("sendMessage")) {
