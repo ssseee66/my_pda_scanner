@@ -11,6 +11,7 @@ class MyPdaScannerUtil {
   bool showLog = true;
 
   EventChannel eventChannel = EventChannel('my_pda_channel');
+  MethodChannel flutterChannel = MethodChannel("flutter_to_android");
 
   void printLog(dynamic log) {
     if (showLog) {
@@ -34,6 +35,15 @@ class MyPdaScannerUtil {
         codeHandle.call(event.toString());
       }
     });
+  }
+
+  Future<void> sendMessageToAndroid(String pda_action, String data_tag) async {
+    try {
+      await flutterChannel.invokeMapMethod(
+          "sendMessage", {'pda_action': pda_action, 'data_tag': data_tag});
+    } catch (e) {
+      print('Error: $e');
+    }
   }
 
   /// 关闭监听
