@@ -65,7 +65,7 @@ public class MyPdaScannerPlugin implements FlutterPlugin {
         // 注册MethodChannel
         flutterChannel = new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), FLUTTER_TO_ANDROID_CHANNEL);
         //接受flutter消息
-        methodChannel.setMethodCallHandler(new MethodCallHandler() {
+        flutterChannel.setMethodCallHandler(new MethodCallHandler() {
             @Override
             public void onMethodCall(MethodCall call, Result result) {
                 if (call.method.equals("sendMessage")) {
