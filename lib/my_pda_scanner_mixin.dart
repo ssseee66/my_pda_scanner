@@ -1,16 +1,19 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:my_pda_scanner/my_pda_scanner_util.dart';
 
 /// 商米扫描设备混入
 mixin MyPdaScannerMixin<T extends StatefulWidget> on State<T> {
   late StreamSubscription streamSubscription;
   final MyPdaScannerUtil util = MyPdaScannerUtil();
+  MethodChannel _channel = MethodChannel("flutter_to_android");
 
   @override
   void initState() {
     super.initState();
+
     /// 开始监听流
     Future.microtask(() {
       streamSubscription = util.start().listen((event) {
@@ -28,6 +31,15 @@ mixin MyPdaScannerMixin<T extends StatefulWidget> on State<T> {
   /// 可以在这里处理相关逻辑
   ///
   Future<void> myPdaScannerCodeHandle(String code);
+
+  Future<void> sendMessageToAndroid(String pda_action, String data_tag) async {
+    try {
+      await _channel.invokeMapMethod(
+          "sendMessage", {'pda_action': pda_action, 'data_tag': data_tag});
+    } catch (e) {
+      print('Error: $e');
+    }
+  }
 
   @override
   void dispose() {

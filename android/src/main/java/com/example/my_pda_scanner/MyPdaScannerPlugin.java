@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.EventChannel;
+import io.flutter.plugin.common.MethodChannel;
 
 /**
  * MyPdaScannerPlugin
@@ -16,12 +17,14 @@ import io.flutter.plugin.common.EventChannel;
 public class MyPdaScannerPlugin implements FlutterPlugin {
 
     private EventChannel eventChannel;
+    private MethodChannel flutterChannel;
     private Context applicationContext;
 
-    private static final String ACTION_DATA_CODE_RECEIVED = "com.service.scanner.data";
-    private static final String DATA = "ScanCode";
+    private static String ACTION_DATA_CODE_RECEIVED = "";
+    private static String DATA = "";
 
     private static final String CHARGING_CHANNEL = "my_pda_channel";
+    private static final String FLUTTER_TO_ANDROID_CHANNEL = "flutter_to_android";
 
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
@@ -53,6 +56,30 @@ public class MyPdaScannerPlugin implements FlutterPlugin {
     @Override
     public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
         eventChannel.setStreamHandler(null);
+    }
+
+    @Override
+    public void configureFlutterEngine(@NonNull FlutterEngine flutterEngine) {
+        super.configureFlutterEngine(flutterEngine);
+
+        // 注册MethodChannel
+        flutterChannel = new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), FLUTTER_TO_ANDROID_CHANNEL);
+        //接受flutter消息
+        methodChannel.setMethodCallHandler(new MethodCallHandler() {
+            @Override
+            public void onMethodCall(MethodCall call, Result result) {
+                if (call.method.equals("sendMessage")) {
+                    String pda_action = call.argument("pda_action");
+                    String data_tag = call.argument("data_tag");
+                    // 处理Flutter端发送的消息
+                    ACTION_DATA_CODE_RECEIVED = pda_action;
+                    DATA = data_tag;
+                    result.success(null); // 返回结果给Flutter端
+                    } else {
+                    result.notImplemented();
+                }
+            }
+        });
     }
 
     private BroadcastReceiver createChargingStateChangeReceiver(final EventChannel.EventSink events) {
