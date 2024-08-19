@@ -7,6 +7,9 @@ import android.content.IntentFilter;
 
 import androidx.annotation.NonNull;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodChannel;
@@ -24,7 +27,7 @@ public class MyPdaScannerPlugin implements FlutterPlugin {
     private Context applicationContext;
 
     private static String ACTION_DATA_CODE_RECEIVED = "";
-    private static String DATA = "";
+    private static Map<String, String> DATA_MAP = new HashMap<>();
 
     private static final String CHARGING_CHANNEL = "my_pda_channel";
     private static final String FLUTTER_TO_ANDROID_CHANNEL = "flutter_to_android";
@@ -38,9 +41,13 @@ public class MyPdaScannerPlugin implements FlutterPlugin {
             public void onMethodCall(MethodCall call, Result result) {
                 if (call.method.equals("sendMessage")) {
                     String pda_action = call.argument("pda_action");
-                    String data_tag = call.argument("data_tag");
+                    String qr_data_tag = call.argument("qr_data_tag");
+                    String image_data_tag = call.argument("image_data_tag");
+                    String ocr_data_tag = call.argument("ocr_data_tag");
                     ACTION_DATA_CODE_RECEIVED = pda_action;
-                    DATA = data_tag;
+                    DATA_MAP.put("qr_data_tag", qr_data_tag);
+                    DATA_MAP.put("ocr_data_tag", ocr_data_tag);
+                    DATA_MAP.put("image_data_tag", image_data_tag);
                     result.success(null); 
                     } else {
                     result.notImplemented();
@@ -82,11 +89,22 @@ public class MyPdaScannerPlugin implements FlutterPlugin {
         return new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                String code = intent.getStringExtra(DATA);
-                if (code != null) {
-                    events.success(code);
+                Map<String, String> data_map = new HashMap<>();
+                if (!DATA_MAP.isEmpty()) {
+                    data_map.put(
+                            "qr_data",
+                            intent.getStringExtra(DATA_MAP.get("qr_data_tag"))
+                    );
+                    data_map.put(
+                            "image_data",
+                            intent.getStringExtra(DATA_MAP.get("image_data_tag"))
+                    );
+                    data_map.put(
+                            "ocr_data",
+                            intent.getStringExtra(DATA_MAP.get("ocr_data_tag"))
+                    );
+                    events.success(data_map);
                 }
-
             }
         };
     }

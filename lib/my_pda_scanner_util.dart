@@ -15,7 +15,7 @@ class MyPdaScannerUtil {
 
   void printLog(dynamic log) {
     if (showLog) {
-      debugPrint('商米: $log');
+      debugPrint('PDA_LOG: $log');
     }
   }
 
@@ -37,10 +37,10 @@ class MyPdaScannerUtil {
     });
   }
 
-  void sendMessageToAndroid(String pda_action, String data_tag) async {
+  void sendMessageToAndroid(Map<String, String> data_map) async {
     try {
       await flutterChannel.invokeMapMethod(
-          "sendMessage", {'pda_action': pda_action, 'data_tag': data_tag});
+          "sendMessage", data_map);
     } catch (e) {
       print('Error: $e');
     }
