@@ -103,6 +103,7 @@ public class MyPdaScannerPlugin implements FlutterPlugin {
                             "ocr_data",
                             intent.getStringExtra(DATA_MAP.get("ocr_data_tag"))
                     );
+
                     events.success(data_map);
                 }
             }
