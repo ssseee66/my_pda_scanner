@@ -29,7 +29,7 @@ mixin MyPdaScannerMixin<T extends StatefulWidget> on State<T> {
   ///
   /// 可以在这里处理相关逻辑
   ///
-  Future<void> myPdaScannerCodeHandle(String code);
+  Future<void> myPdaScannerCodeHandle(Map<String, String> code);
 
   @override
   void dispose() {
