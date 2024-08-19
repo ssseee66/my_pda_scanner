@@ -37,9 +37,10 @@ class MyPdaScannerUtil {
     });
   }
 
-  void sendMessageToAndroid(Map<String, String> data_map) async {
+  void sendMessageToAndroid(String pda_action, String data_tag) async {
     try {
-      await flutterChannel.invokeMapMethod("sendMessage", data_map);
+      await flutterChannel.invokeMapMethod(
+          "sendMessage", {"pda_action": pda_action, "data_tag": data_tag});
     } catch (e) {
       print('Error: $e');
     }
