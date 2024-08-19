@@ -32,15 +32,14 @@ class MyPdaScannerUtil {
     streamSubscription = start().listen((event) {
       if (event != null) {
         printLog('扫描到数据$event');
-        codeHandle.call(event.toString());
+        codeHandle.call(event);
       }
     });
   }
 
   void sendMessageToAndroid(Map<String, String> data_map) async {
     try {
-      await flutterChannel.invokeMapMethod(
-          "sendMessage", data_map);
+      await flutterChannel.invokeMapMethod("sendMessage", data_map);
     } catch (e) {
       print('Error: $e');
     }
