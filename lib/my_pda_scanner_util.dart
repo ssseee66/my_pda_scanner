@@ -32,7 +32,7 @@ class MyPdaScannerUtil {
     streamSubscription = start().listen((event) {
       if (event != null) {
         printLog('扫描到数据$event');
-        codeHandle.call(event);
+        codeHandle.call(event.toString());
       }
     });
   }
