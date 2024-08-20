@@ -18,7 +18,7 @@ mixin MyPdaScannerMixin<T extends StatefulWidget> on State<T> {
       streamSubscription = util.start().listen((event) {
         util.printLog("接收扫描数据:$event");
         if (event != null) {
-          myPdaScannerCodeHandle(event.toString());
+          myPdaScannerCodeHandle(event);
         }
       });
     });
@@ -29,7 +29,7 @@ mixin MyPdaScannerMixin<T extends StatefulWidget> on State<T> {
   ///
   /// 可以在这里处理相关逻辑
   ///
-  Future<void> myPdaScannerCodeHandle(String code);
+  Future<void> myPdaScannerCodeHandle(Map<String, String> code);
 
   @override
   void dispose() {
