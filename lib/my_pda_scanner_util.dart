@@ -32,18 +32,18 @@ class MyPdaScannerUtil {
     streamSubscription = start().listen((event) {
       if (event != null) {
         printLog('扫描到数据$event');
-        // codeHandle.call(event.toString());
-        codeHandle.call(event);
+        codeHandle.call(event.toString());
+        // codeHandle.call(event);
       }
     });
   }
 
-  void sendMessageToAndroid(Map<String, String> data_map) async {
+  void sendMessageToAndroid(String pda_action, String data_tag) async {
     try {
       await flutterChannel.invokeMapMethod(
-          // "sendMessage", {"pda_action": pda_action, "data_tag": data_tag});
-          "sendMessage",
-          data_map);
+          "sendMessage", {"pda_action": pda_action, "data_tag": data_tag});
+      // "sendMessage",
+      // data_map);
     } catch (e) {
       print('Error: $e');
     }
