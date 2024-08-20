@@ -106,7 +106,7 @@ public class MyPdaScannerPlugin implements FlutterPlugin {
                     data_map.put("qr_data", qr_data);
                     data_map.put("image_data", image_data);
                     data_map.put("ocr_data", ocr_data);
-                    events.success(code);
+                    events.success(data_map);
                 }
             }
         };
