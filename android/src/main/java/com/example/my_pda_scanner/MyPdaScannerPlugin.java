@@ -101,7 +101,7 @@ public class MyPdaScannerPlugin implements FlutterPlugin {
                 if (!DATA_MAP.isEmpty()) {
                     String qr_data = intent.getStringExtra(DATA_MAP.get("qr_data_tag"));
                     String image_data = intent.getStringExtra(DATA_MAP.get("image_data_tag"));
-                    String ocr_data = intend.getStringExtra(DATA_MAP.get("ocr_data_tag"));
+                    String ocr_data = intent.getStringExtra(DATA_MAP.get("ocr_data_tag"));
                     Map<String, String> data_map = new HashMap<>();
                     data_map.put("qr_data", qr_data);
                     data_map.put("image_data", image_data);
