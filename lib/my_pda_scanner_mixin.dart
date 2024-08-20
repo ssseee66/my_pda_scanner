@@ -25,8 +25,6 @@ mixin MyPdaScannerMixin<T extends StatefulWidget> on State<T> {
   }
 
   ///
-  /// 当商米红外扫描头扫描到数据的时候执行回调
-  ///
   /// 可以在这里处理相关逻辑
   ///
   Future<void> myPdaScannerCodeHandle(Map<String, String> code);
