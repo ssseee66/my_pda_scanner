@@ -51,7 +51,7 @@ public class MyPdaScannerPlugin implements FlutterPlugin {
                     // DATA_MAP.put("qr_data_tag", qr_data_tag);
                     // DATA_MAP.put("image_data_tag", image_data_tag);
                     // DATA_MAP.put("ocr_data_tag", ocr_data_tag);
-                    // ACTION_DATA_CODE_RECEIVED = pda_action;
+                    ACTION_DATA_CODE_RECEIVED = pda_action;
                     DATA = data_tag;
                     result.success(null); 
                     } else {
